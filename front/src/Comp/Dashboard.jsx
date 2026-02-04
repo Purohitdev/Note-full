@@ -7,7 +7,7 @@ import axios from "axios";
 
 // ⭐ AXIOS INSTANCE (INSIDE SAME FILE)
 const notesApi = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://trash-9ud4.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

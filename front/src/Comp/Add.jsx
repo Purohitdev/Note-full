@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BsSun, BsMoon } from "react-icons/bs";
 import Nav from "./Nav";
 
-const API_URL = "http://localhost:3000/api/notes";
+const API_URL = "https://trash-9ud4.onrender.com/api/notes";
 
 export default function Add() {
   const navigate = useNavigate();

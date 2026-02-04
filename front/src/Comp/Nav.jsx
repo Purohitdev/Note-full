@@ -17,7 +17,7 @@ function Nav({ showBackButton = false }) {
       {showBackButton ? (
         <button
           className="rounded-3xl px-4 py-2 bg-gray-800 text-white"
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/")}
         >
           Back to Dashboard
         </button>
