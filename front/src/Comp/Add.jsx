@@ -32,7 +32,7 @@ export default function Add() {
         body: JSON.stringify({ title, description }),
       });
 
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       console.error(err);
     } finally {
