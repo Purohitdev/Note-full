@@ -1,15 +1,14 @@
 const express = require('express');
 const NoteModel = require('./models/note.model');
 const cors = require('cors');
+const parth = require('path');
 
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(express.static("./Public"));
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
 
 // create note
 app.post("/api/notes", async (req, res) => {
@@ -62,5 +61,14 @@ app.patch("/api/notes/:id", async (req, res) => {
         message: "Note updated successfully",
     })
 })
+
+// wildcard route
+app.use('*name', (req, res) => {
+
+    res.sendFile(parth.join(__dirname, ".." , "/public/index.html"));
+    
+})
+
+
 
 module.exports = app;
